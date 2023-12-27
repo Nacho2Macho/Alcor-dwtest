@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  border: 2px solid var(--mainColor);
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 200%;
+  padding: 12px 60px;
+  text-decoration: none;
+}

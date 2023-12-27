@@ -1,0 +1,26 @@
+// .header.light {
+//     transition: opacity .3s ease-in-out .3s;
+
+//     .header__logo-image {
+//         &:last-child {
+//             opacity: 0;
+//             transition: opacity .3s ease-in-out .3s;
+//         }
+//     }
+// }
+
+// .header.dark {
+//     transition: opacity .3s ease-in-out .3s;
+
+//     .header__logo-image {
+//         &:first-child {
+//             opacity: 0;
+//             transition: opacity .3s ease-in-out .3s;
+//         }
+
+//         &:last-child {
+//             position: relative;
+//             left: -40px;
+//         }
+//     }
+// }
