@@ -15,7 +15,7 @@
     justify-content: space-between;
     position: relative;
     border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    transition: border-bottom .5s ease-in-out, padding-bottom .5s ease-in-out;
     padding-bottom: 0;
     cursor: pointer;
 
@@ -26,23 +26,22 @@
         left: 100%;
         transform: translate(-100%, -50%);
         opacity: 0;
-        transition: opacity 0.3s ease-in-out;
+        transition: opacity .5s ease-in-out;
     }
 
-    @media (any-hover: hover) {
-        &:hover {
-            & {
-                border-bottom: 1px solid #fff;
-                transition: border-bottom 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
-                padding-bottom: 18px;
-            }
+    &.active {
+        & {
+            border-bottom: 1px solid #fff;
+            transition: border-bottom .5s ease-in-out, padding-bottom .5s ease-in-out;
+            padding-bottom: 18px;
+        }
 
-            &:after {
-                opacity: 1;
-                transition: opacity 0.3s ease-in-out;
-            }
+        &:after {
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
         }
     }
+
 }
 
 .link {
