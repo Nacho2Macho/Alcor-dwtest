@@ -1,9 +1,6 @@
-
 .button {
     display: flex;
     width: max-content;
-    border: 2px solid var(--mainColor);
-    color: var(--mainColor);
     font-family: var(--mainFont);
     font-size: 18px;
     font-weight: 500;
@@ -12,6 +9,49 @@
     text-decoration: none;
 }
 
-.wrapper{
-    
+.link-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    padding-bottom: 0;
+    cursor: pointer;
+
+    &:after {
+        content: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.6 9L24 23.4V10.5H27V28.5H9V25.5H21.9L7.5 11.1L9.6 9Z' fill='white'/%3E%3C/svg%3E");
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            & {
+                border-bottom: 1px solid #fff;
+                transition: border-bottom 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+                padding-bottom: 18px;
+            }
+
+            &:after {
+                opacity: 1;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+    }
 }
+
+.link {
+    color: #FFF;
+    font-family: var(--mainFont);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 125%;
+    text-decoration: none;
+}
+
+.wrapper {}
