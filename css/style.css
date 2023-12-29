@@ -532,7 +532,7 @@ body {
 }
 .production__wrapper:before {
   content: "";
-  background: url("/images/alcor-production-image/production__wrapper-links-background-1.png");
+  background: url("../images/alcor-production-image/production__wrapper-links-background-1.png");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -796,7 +796,7 @@ body {
 
 .partners__wrapper {
   padding: 100px 120px 15px 120px;
-  background: url("/images/alcor-partners-image/partners-background-image.jpg");
+  background: url("../images/alcor-partners-image/partners-background-image.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -926,7 +926,7 @@ body {
 
 .connect__wrapper {
   padding: 100px 120px 15px 120px;
-  background: url("/images/alcor-connect-image/connect-background-image.jpg");
+  background: url("../images/alcor-connect-image/connect-background-image.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
