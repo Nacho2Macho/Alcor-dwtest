@@ -7,6 +7,7 @@
     line-height: 200%;
     padding: 12px 60px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .title {
@@ -66,4 +67,10 @@
     text-decoration: none;
 }
 
-.wrapper {}
+#name-error {
+    
+}
+
+[id*="-error"] {
+    color: #fff;
+}

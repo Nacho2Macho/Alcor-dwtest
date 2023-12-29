@@ -464,8 +464,7 @@ button.swiper-pagination-bullet {
 .swiper-vertical>.swiper-pagination-bullets {
     right: var(--swiper-pagination-right, 8px);
     left: 0;
-    /* top: 50%; */
-    top: 54%;
+    top: 48%;
     height: auto;
     transform: translate3d(0px, -50%, 0)
 }

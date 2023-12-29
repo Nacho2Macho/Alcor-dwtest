@@ -8,6 +8,7 @@
   line-height: 200%;
   padding: 12px 60px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .title {
@@ -59,4 +60,8 @@
   font-weight: 400;
   line-height: 125%;
   text-decoration: none;
+}
+
+[id*=-error] {
+  color: #fff;
 }
