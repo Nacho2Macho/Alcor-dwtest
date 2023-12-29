@@ -28,6 +28,35 @@ body {
     z-index: 10;
     border-bottom: 1px solid var(--colorText);
 
+    &.dark {
+        .header__logo-image--dark {
+            fill: #000;
+            transition: fill .3s ease-in-out .3s;
+        }
+
+        .menu__phone-image {
+            filter: brightness(10%);
+            transition: filter .3s ease-in-out .3s;
+        }
+
+        .menu__phone-link {
+            span {
+                color: #000;
+                transition: color .3s ease-in-out .3s;
+            }
+        }
+        .menu__burger{
+            span{
+                color: var(--mainColor);
+                transition: color .3s ease-in-out .3s;
+            }
+        }
+        .menu__burger-image {
+            filter: brightness(0) saturate(100%) invert(34%) sepia(96%) saturate(2173%) hue-rotate(2deg) brightness(104%) contrast(108%);
+            transition: filter .3s ease-in-out .3s;
+        }
+    }
+
     // .header__content
 
     &__content {
@@ -42,7 +71,9 @@ body {
 
         //.header__logo-image
         &-image {
-            &--path {}
+            &--dark {
+                transition: fill .3s ease-in-out .3s;
+            }
         }
     }
 
@@ -67,30 +98,30 @@ body {
         @include adaptiv-value("padding-left", 64, 20, 1);
         border-left: 1px solid var(--colorMainSlideBorder);
         border-right: 1px solid var(--colorMainSlideBorder);
-        // &:before{
-        //     content: "";
-        //     position: absolute;
-        //     top: -16px;
-        //     left: 0;
-        //     width: 1px;
-        //     height: 71px;
-        // }
-        // padding: 0 81px 25px 65px;
-    }
 
-    // .menu__phone-link
+        // .menu__phone-link
 
-    &__phone-link {
-        color: #fff;
-        font-family: var(--mainFont);
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 200%;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        text-decoration: none;
+        &-link {
+            color: #fff;
+            font-family: var(--mainFont);
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 200%;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+
+            span {
+                transition: color .3s ease-in-out .3s;
+            }
+        }
+
+        //.menu__phone-image
+        &-image {
+            transition: filter .3s ease-in-out .3s;
+        }
     }
 
     // .menu__burger
@@ -111,18 +142,26 @@ body {
             font-weight: 600;
             line-height: 200%;
             text-transform: uppercase;
+            transition: color .3s ease-in-out .3s;
+        }
+
+        // .menu__burger-icon
+
+        &-icon {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        // .menu__burger-image
+
+        &-image {
+            transition: filter .3s ease-in-out .3s;
         }
 
         // padding: 0 79px 25px 75px;
     }
 
-    // .menu__burger-icon
-
-    &__burger-icon {
-        background-color: transparent;
-        border: none;
-        padding: 0;
-    }
 }
 
 .main {
@@ -329,7 +368,7 @@ body {
             position: relative;
             top: 0;
             left: 0;
-            padding: 120px 80px 15px 80px;
+            padding: 100px 80px 15px 80px;
             height: 100vh;
             transition: opacity 0.3s, z-index 0.3s;
         }
@@ -446,7 +485,7 @@ body {
             margin: 0;
             padding: 0;
             cursor: pointer;
-            max-width: 100%;
+            width: 100%;
         }
 
         //.main__menu-photo
@@ -455,6 +494,7 @@ body {
         // .main__menu-item
 
         &-item {
+            position: relative;
             list-style: none;
             display: flex;
             gap: 20px;
@@ -462,11 +502,35 @@ body {
             padding: 15px 0 14px;
             border-left: 1px solid var(--colorMainSlideBorder);
             border-right: 1px solid var(--colorMainSlideBorder);
+
+            // &.hover {
+            //     flex-grow: 1;
+            // }
+
+            &:hover {
+                flex-grow: 1;
+
+                .main__menu-text {
+                    animation: clip 1.25s ease forwards;
+                    animation-delay: 0.5s;
+                    display: block;
+                }
+            }
+        }
+
+        @keyframes clip {
+            from {
+                clip-path: polygon(0 0%, 0% 0, 0 100%, 0 100%);
+            }
+
+            to {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
         }
 
         //.main__menu-text
         &-text {
-            // white-space: nowrap;
+            clip-path: polygon(0 0%, 0% 0, 0 100%, 0 100%);
             color: var(--mainColor);
             font-family: var(--mainFont);
             font-size: 21px;
@@ -474,6 +538,7 @@ body {
             line-height: normal;
             text-transform: uppercase;
             margin: 0;
+            display: none;
 
         }
     }
@@ -546,7 +611,7 @@ body {
     &__paragraphs {
         display: flex;
         gap: 20px;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         // padding: 0 40px;
     }
 
@@ -660,7 +725,8 @@ body {
         position: relative;
         top: 0;
         left: 0;
-        padding: 120px 120px 15px 120px;
+        padding: 100px 120px 15px 120px;
+        height: 100vh;
 
         &:before,
         &:after {
@@ -673,12 +739,13 @@ body {
 
         &:before {
             content: '';
-            background: url("../images/alcor-production-image/production__wrapper-links-background-1.png");
+            background: url("/images/alcor-production-image/production__wrapper-links-background-1.png");
             background-attachment: fixed;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
             left: 0;
+
         }
 
         &:after {
@@ -691,15 +758,14 @@ body {
 
         &-links {
             flex: 0 1 47.6%;
-            padding: 20px;
-
+            padding: 0 20px 20px 20px;
         }
 
         // .production__wrapper-details
 
         &-details {
             flex: 1;
-            padding: 20px;
+            padding: 0 20px 20px 20px;
         }
     }
 
@@ -707,7 +773,7 @@ body {
 
     &__title {
         color: #FFF;
-        margin: 0 0 60px 0;
+        margin: 0 0 40px 0;
     }
 
     // .production__items
@@ -721,7 +787,7 @@ body {
 
     &__item {
         &:not(:last-child) {
-            margin-bottom: 34px;
+            margin-bottom: 25px;
         }
     }
 
@@ -908,7 +974,7 @@ body {
 
         &-image {
             position: absolute;
-            top: -20%;
+            top: -22%;
             left: 0;
             width: 80%;
         }
@@ -959,13 +1025,14 @@ body {
     // .history__wrapper
 
     &__wrapper {
-        padding: 120px 120px 15px 120px;
+        padding: 100px 120px 15px 120px;
         background-color: var(--colorBorder);
+        height: 100vh;
         // .history__wrapper-title
 
         &-title {
             color: var(--mainSubColor);
-            margin: 0 0 60px 0;
+            margin: 0 0 40px 0;
         }
     }
 
@@ -1051,7 +1118,7 @@ body {
 
         &-description {
             flex: 0 1 50%;
-            padding-top: 44px;
+            // padding-top: 20px;
         }
 
         &-phase,
@@ -1090,8 +1157,8 @@ body {
     // .partners__wrapper
 
     &__wrapper {
-        padding: 120px 120px 15px 120px;
-        background: url("../images/alcor-partners-image/partners-background-image.jpg");
+        padding: 100px 120px 15px 120px;
+        background: url("/images/alcor-partners-image/partners-background-image.jpg");
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -1122,7 +1189,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
 
         // .partners__wrapper-title
@@ -1198,7 +1265,8 @@ body {
     // .contacts__wrapper
 
     &__wrapper {
-        padding: 120px 120px 15px 120px;
+        padding: 100px 120px 15px 120px;
+        height: 100vh;
         background-color: var(--colorBorder);
         // .contacts__wrapper-head
 
@@ -1206,12 +1274,14 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         // .contacts__wrapper-title
 
-        &-title {}
+        &-title {
+            margin: 0 0 30px 0;
+        }
 
         // .contacts__wrapper-links
 
@@ -1252,7 +1322,7 @@ body {
             display: grid;
             grid-template-columns: repeat(3, 24%);
             grid-template-rows: repeat(2, 1fr);
-            gap: 63px 163px;
+            gap: 30px 163px;
         }
 
         // .contacts__wrapper-item
@@ -1309,7 +1379,7 @@ body {
 
         &-map {
             width: 100%;
-            height: 450px;
+            height: 350px;
         }
     }
 
@@ -1320,8 +1390,8 @@ body {
     // .connect__wrapper
 
     &__wrapper {
-        padding: 120px 120px 15px 120px;
-        background: url("../images/alcor-connect-image/connect-background-image.jpg");
+        padding: 100px 120px 15px 120px;
+        background: url("/images/alcor-connect-image/connect-background-image.jpg");
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;

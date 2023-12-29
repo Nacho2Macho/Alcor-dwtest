@@ -76,7 +76,7 @@
 .about__swiper-prev,
 .about__swiper-next {
   position: fixed;
-  top: 37%;
+  top: 34%;
   width: 24px;
   height: 24px;
   margin-top: calc(0px - var(--swiper-navigation-size) / 2);

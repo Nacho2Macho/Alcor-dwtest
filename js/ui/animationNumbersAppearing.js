@@ -2,7 +2,7 @@ const animateValue = (element) => {
     const start = parseInt(element.dataset.start);
     const end = parseInt(element.dataset.end);
     const duration = parseInt(element.dataset.duration);
-    const slowdownFactor = 2; // Коэффициент замедления (можно изменить)
+    const slowdownFactor = 2;
 
     if (start === end) return;
 
@@ -15,7 +15,7 @@ const animateValue = (element) => {
         const currentTime = performance.now();
         const elapsed = currentTime - startTime;
         const progress = elapsed / duration;
-        const slowedProgress = Math.pow(progress, slowdownFactor); // Применяем замедление
+        const slowedProgress = Math.pow(progress, slowdownFactor);
         current = start + Math.floor(slowedProgress * range) * increment;
         element.textContent = current;
 
@@ -43,7 +43,7 @@ const handleIntersection = (entries, observer) => {
         } else {
             const targetElements = entry.target.querySelectorAll('.about__subtitle-text');
             targetElements.forEach(element => {
-                element.textContent = element.dataset.start; // Reset the value when not in view
+                element.textContent = element.dataset.start; 
             });
         }
     });

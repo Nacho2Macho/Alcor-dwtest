@@ -57,6 +57,7 @@ if (document.querySelector(".main")) {
         }
     });
 }
+
 if (document.querySelector(".about")) {
     const aboutSwiper = new Swiper(".about__wrapper-slider", {
         observer: true,
@@ -72,6 +73,7 @@ if (document.querySelector(".about")) {
         },
     })
 }
+
 if (document.querySelector(".history")) {
     const historySwiper = new Swiper(".history__slider", {
         observer: true,
@@ -115,6 +117,7 @@ if (document.querySelector(".history")) {
         });
     });
 }
+
 if (document.querySelector(".partners")) {
     const aboutSwiper = new Swiper(".partners__wrapper-slider", {
         observer: true,
