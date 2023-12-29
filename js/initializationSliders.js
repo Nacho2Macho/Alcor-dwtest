@@ -57,7 +57,7 @@ if (document.querySelector(".main")) {
         }
     });
 }
-if(document.querySelector(".about")) {
+if (document.querySelector(".about")) {
     const aboutSwiper = new Swiper(".about__wrapper-slider", {
         observer: true,
         observeParents: true,
@@ -69,6 +69,65 @@ if(document.querySelector(".about")) {
         navigation: {
             nextEl: '.about__swiper-next',
             prevEl: '.about__swiper-prev',
+        },
+    })
+}
+if (document.querySelector(".history")) {
+    const historySwiper = new Swiper(".history__slider", {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        simulateTouch: true,
+        grabCursor: true,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+        speed: 800,
+        navigation: {
+            nextEl: '.history__swiper-next',
+            prevEl: '.history__swiper-prev',
+        },
+        on: {
+            init: function () {
+                const activeIndex = this.activeIndex;
+                const lineItems = document.querySelectorAll(".history__line-item");
+                lineItems[activeIndex].classList.add("active");
+            },
+            slideChange: function () {
+                const activeIndex = this.activeIndex;
+                const lineItems = document.querySelectorAll(".history__line-item");
+                lineItems.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+                lineItems[activeIndex].classList.add("active");
+                historySwiper.slideTo(activeIndex);
+            }
+        }
+    });
+
+    const lineItems = document.querySelectorAll(".history__line-item");
+    lineItems.forEach(function (item, index) {
+        item.addEventListener("click", function () {
+            lineItems.forEach(function (item) {
+                item.classList.remove("active");
+            });
+            item.classList.add("active");
+            historySwiper.slideTo(index);
+        });
+    });
+}
+if (document.querySelector(".partners")) {
+    const aboutSwiper = new Swiper(".partners__wrapper-slider", {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        simulateTouch: true,
+        grabCursor: true,
+        slidesPerGroup: 1,
+        spaceBetween: 30,
+        speed: 800,
+        navigation: {
+            nextEl: '.partners__swiper-next',
+            prevEl: '.partners__swiper-prev',
         },
     })
 }

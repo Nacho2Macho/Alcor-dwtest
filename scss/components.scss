@@ -9,6 +9,13 @@
     text-decoration: none;
 }
 
+.title {
+    font-family: var(--mainFont);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: normal;
+}
+
 .link-hover {
     display: flex;
     align-items: center;
@@ -42,6 +49,12 @@
         }
     }
 
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 70px;
 }
 
 .link {
