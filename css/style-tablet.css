@@ -62,6 +62,7 @@
     padding-right: 5.108vw;
     padding-bottom: 5vw;
     margin: 0 8.065vw;
+    min-height: 134.409vw;
   }
 }
 
@@ -524,6 +525,7 @@
   .connect__wrapper-container {
     padding: 8.333vw 2.688vw 4.57vw 2.688vw;
     margin: 0 8.065vw;
+    height: auto;
   }
   .connect__wrapper-section {
     width: 100%;

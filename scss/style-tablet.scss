@@ -84,7 +84,7 @@
     padding-right: 5.108vw;
     padding-bottom: 5vw;
     margin: 0 8.065vw;
-    // height: 90vh;
+    min-height: 134.409vw;
     // padding-bottom: 36.156vw;
   }
 }
@@ -708,6 +708,7 @@
     &-container {
       padding: 8.333vw 2.688vw 4.57vw 2.688vw;
       margin: 0 8.065vw;
+      height: auto;
     }
 
     //.connect__wrapper-section
