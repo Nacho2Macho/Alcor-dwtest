@@ -19,9 +19,9 @@
 
     //.header__logo
     &__logo {
-
       //.header__logo-image
-      &-image {}
+      &-image {
+      }
     }
   }
 }
@@ -62,6 +62,13 @@
 
 //Start Main
 
+//.main__slide-wrapper
+.main__slide-wrapper {
+  @media (max-width: 1240px) and (min-width: 744px) {
+    height: auto;
+  }
+}
+
 //.main__swiper-wrapper
 .main__swiper-wrapper.swiper-wrapper {
   @media (max-width: 1240px) and (min-width: 744px) {
@@ -75,8 +82,9 @@
     padding-top: 38.978vw;
     padding-left: 4.973vw;
     padding-right: 5.108vw;
-    padding-bottom: 48vw;
+    padding-bottom: 5vw;
     margin: 0 8.065vw;
+    height: 90vh;
     // padding-bottom: 36.156vw;
   }
 }
@@ -168,7 +176,6 @@
 
 //.main__menu-photo
 .main__menu-photo {
-
   //.main__menu-photo--hover
   &,
   &--hover {
@@ -253,7 +260,6 @@
 //.about__item
 .about__item {
   @media (max-width: 1240px) and (min-width: 744px) {
-
     //.about__item picture
     picture {
       width: 37.903vw;
@@ -277,7 +283,6 @@
 //.production__wrapper
 .production__wrapper {
   @media (max-width: 1240px) and (min-width: 744px) {
-
     //.production__wrapper--desktop
     &--desktop {
       display: none;
@@ -444,7 +449,7 @@
   }
 }
 
-//.production__item--tablet.active 
+//.production__item--tablet.active
 .production__item--tablet.active {
   @media (max-width: 1240px) and (min-width: 744px) {
     margin-bottom: 4.16667vw;
@@ -513,10 +518,12 @@
     flex-direction: column;
 
     //.history__information-phase
-    &-phase {}
+    &-phase {
+    }
 
     //.history__information-text
-    &-text {}
+    &-text {
+    }
 
     //.history__information-phase
     //.history__information-text
@@ -652,7 +659,7 @@
 
     //.contacts__wrapper-description
     &-description,
-    &-description>* {
+    &-description > * {
       font-size: 2.419vw;
       line-height: 3.024vw;
     }
@@ -750,7 +757,7 @@
     &-checkbox {
       gap: 2.151vw;
 
-      & input[type="checkbox"]+label {
+      & input[type="checkbox"] + label {
         width: 2.688vw;
         height: 2.688vw;
         min-width: 2.688vw;

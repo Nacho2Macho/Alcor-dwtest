@@ -253,6 +253,7 @@ h4 {
   position: relative;
   top: 0;
   left: 0;
+  height: 100vh;
   transition: opacity 0.3s, z-index 0.3s;
 }
 .main__slide-container {
@@ -262,6 +263,7 @@ h4 {
   padding-left: 2.083vw;
   padding-top: 5.20833vw;
   padding-bottom: 20vw;
+  height: 100vh;
 }
 .main__slide-content {
   padding-left: 9.16667vw;
@@ -951,6 +953,7 @@ h4 {
   padding: 5.20833vw 2.083vw 30vw;
   margin: 0vw 4.167vw;
   position: relative;
+  height: 100vh;
 }
 .partners__wrapper-head {
   display: flex;
@@ -1109,6 +1112,7 @@ h4 {
   padding: 5.20833vw 2.083vw 30vw;
   border-left: 0.052vw solid var(--colorText);
   border-right: 0.052vw solid var(--colorText);
+  height: 100vh;
 }
 .connect__wrapper-section {
   width: 43%;

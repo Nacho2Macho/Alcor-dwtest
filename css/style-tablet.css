@@ -44,6 +44,12 @@
 }
 
 @media (max-width: 1240px) and (min-width: 744px) {
+  .main__slide-wrapper {
+    height: auto;
+  }
+}
+
+@media (max-width: 1240px) and (min-width: 744px) {
   .main__swiper-wrapper.swiper-wrapper {
     flex-direction: column;
   }
@@ -54,8 +60,9 @@
     padding-top: 38.978vw;
     padding-left: 4.973vw;
     padding-right: 5.108vw;
-    padding-bottom: 48vw;
+    padding-bottom: 5vw;
     margin: 0 8.065vw;
+    height: 90vh;
   }
 }
 

@@ -10,7 +10,8 @@
 .header {
   @media (max-width: 744px) and (min-width: 360px) and (min-height: 640px) {
     height: 13.3vw;
-
+    overflow: hidden;
+    box-sizing: content-box;
     //.header__content
     &__content {
       margin: 0 8.333vw;
@@ -50,6 +51,13 @@
       width: 5.556vw;
       height: 5.556vw;
     }
+  }
+}
+
+//.main__slide-wrapper
+.main__slide-wrapper {
+  @media (max-width: 744px) and (min-width: 360px) and (min-height: 640px) {
+    height: auto;
   }
 }
 
@@ -328,7 +336,7 @@
   }
 }
 
-//.production__item--tablet.active 
+//.production__item--tablet.active
 .production__item--tablet {
   @media (max-width: 744px) and (min-width: 360px) and (min-height: 640px) {
     &.active {
@@ -353,7 +361,6 @@
       line-height: 5.55556vw;
     }
   }
-
 }
 
 //.details__information-description
@@ -549,6 +556,7 @@
     &-container {
       margin: 0 8.333vw;
       padding: 12.5vw 5.55556vw 10vw 5.55556vw;
+      height: auto;
     }
 
     //.partners__wrapper-head
@@ -594,7 +602,6 @@
 }
 
 //End--Partners
-
 
 //Start--Contacts
 
@@ -648,7 +655,7 @@
 
     //.contacts__wrapper-description
     &-description,
-    &-description>* {
+    &-description > * {
       font-size: 3.88889vw;
       line-height: 4.86111vw;
     }
@@ -693,6 +700,7 @@
     &-container {
       margin: 0 8.333vw;
       padding: 11.11111vw 5.55556vw 15vw 5.55556vw;
+      height: auto;
     }
 
     //.connect__wrapper-section
@@ -750,7 +758,7 @@
       margin-bottom: 9.72222vw;
       gap: 4.16667vw;
 
-      & input[type=checkbox]+label {
+      & input[type="checkbox"] + label {
         width: 5.55556vw;
         height: 5.55556vw;
         padding: 0.83333vw;
@@ -840,7 +848,6 @@
 .navigation {
   @media (max-width: 744px) and (min-width: 360px) and (min-height: 640px) {
     gap: 8.33333vw;
-
   }
 }
 

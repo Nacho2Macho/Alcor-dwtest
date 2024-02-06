@@ -7,6 +7,8 @@
 @media (max-width: 744px) and (min-width: 360px) and (min-height: 640px) {
   .header {
     height: 13.3vw;
+    overflow: hidden;
+    box-sizing: content-box;
   }
   .header__content {
     margin: 0 8.333vw;
@@ -37,6 +39,12 @@
   .menu__burger-icon svg {
     width: 5.556vw;
     height: 5.556vw;
+  }
+}
+
+@media (max-width: 744px) and (min-width: 360px) and (min-height: 640px) {
+  .main__slide-wrapper {
+    height: auto;
   }
 }
 
@@ -420,6 +428,7 @@
   .partners__wrapper-container {
     margin: 0 8.333vw;
     padding: 12.5vw 5.55556vw 10vw 5.55556vw;
+    height: auto;
   }
   .partners__wrapper-head {
     margin-bottom: 12.5vw;
@@ -516,6 +525,7 @@
   .connect__wrapper-container {
     margin: 0 8.333vw;
     padding: 11.11111vw 5.55556vw 15vw 5.55556vw;
+    height: auto;
   }
   .connect__wrapper-section {
     width: 100%;
