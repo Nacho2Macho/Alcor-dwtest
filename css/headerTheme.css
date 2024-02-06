@@ -1,0 +1,33 @@
+.header.dark .header__logo-image--dark {
+  fill: #000;
+  transition: fill 0.3s ease-in-out;
+}
+.header.dark .menu__phone-image {
+  filter: brightness(10%);
+  transition: filter 0.3s ease-in-out;
+}
+.header.dark .menu__phone-link span {
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+.header.dark .menu__burger {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+.header.dark .menu__burger span {
+  color: var(--mainColor);
+  transition: color 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .header.dark .menu__burger:hover .menu__burger-image--path {
+    fill: #fff;
+    transition: fill 0.3s ease-in-out;
+  }
+  .header.dark .menu__burger:hover span {
+    transition: color 0.3s ease-in-out;
+    color: #fff;
+  }
+}
+.header.dark .menu__burger-image--path {
+  fill: var(--mainColor);
+  transition: fill 0.3s ease-in-out;
+}
