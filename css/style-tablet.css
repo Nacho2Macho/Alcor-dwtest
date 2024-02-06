@@ -62,7 +62,6 @@
     padding-right: 5.108vw;
     padding-bottom: 5vw;
     margin: 0 8.065vw;
-    height: 90vh;
   }
 }
 
@@ -425,6 +424,7 @@
   .partners__wrapper-container {
     padding: 8.333vw 2.688vw 10vw 2.688vw;
     margin: 0 8.065vw;
+    height: auto;
   }
   .partners__wrapper-head {
     margin-bottom: 12.903vw;
